@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>忽悠你——留言板</title>
+		<script type="text/javascript" src="js/tools.js"></script>
+		<script type="text/javascript" src="js/reg.js"></script>
+		<link href="css/1.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1 id="header"><a href="/">HYN—GuestBook <em>Alpha 1.0</em></a></h1>
+		<p id="sideBar">
+			<a href="/">返回首页</a>
+		</p>
+		<form id="regForm">
+			<h3>用户注册</h3>
+			<dl id="clause">
+				<dt>同意条款</dt>
+				<dd>
+					<iframe src="clause.htm" frameborder="0"></iframe>
+					<label><input type="checkbox" name="agreeClause" value="true" />
+				我已阅读并完全同意条款内容</label>
+				</dd>
+			</dl>
+			<fieldset>
+				<label>用 户 名：<input type="text" name="userName" maxlength="16" />
+					<em class="notice"><span>Notice</span>用户名长度为2-16位字母、数字或下划线</em>
+					<strong  class="notice wrong"><span>Notice</span>用户名不正确！！！</strong>
+				</label>
+				<label>密　码：<input type="password" name="userPwd" maxlength="16" />
+					<em class="notice"><span>Notice</span>密码长度为6-16位字母、数字或下划线，区分大小写</em>
+					<strong  class="notice wrong"><span>Notice</span>密码格式不正确！！！</strong>
+				</label>
+				<label>确认密码：<input type="password" name="rePwd" maxlength="16" />
+					<em class="notice"><span>Notice</span>两次输入的密码必须一致！！！</em>
+					<strong  class="notice wrong"><span>Notice</span>两次输放的密码不一致！！！</strong>
+				</label>
+				<p>性　　别：
+					<input type="radio" name="gender" id="genderMan" value="男" checked="checked" /><label for="genderMan"> 男 </label>
+					<input type="radio" name="gender" id="genderWoman" value="女" /><label for="genderWoman"> 女 </label>
+				</p>
+				<label>Q 　 　Q：<input type="text" name="qq" maxlength="10" />
+					<em class="notice"><span>Notice</span>QQ必须是5-10位数字</em>
+					<strong  class="notice wrong"><span>Notice</span>QQ号码格式不正确！！！</strong>
+				</label>
+				<label>电子邮箱：<input type="text" name="email" maxlength="100" />
+					<em class="notice"><span>Notice</span>请填写真实并且最常用的邮箱。</em>
+					<strong  class="notice wrong"><span>Notice</span>无效的邮箱地址！！！</strong>
+				</label>
+				<p>生　　日：<select name="birthYear">
+						<option value="" selected="selected">—请选择—</option>
+						<option value="1990">1990</option>
+					</select> 年
+					<select name="birthMonth">
+						<option value="" selected="selected">—请选择—</option>
+						<option value="9">9</option>
+					</select> 月
+					<select name="birthDay">
+						<option value="" selected="selected">—请选择—</option>
+						<option value="28">28</option>
+					</select> 日
+				</p>
+				<p style="display:none;">住　　址：<select name="province">
+						<option value="">—请选择—</option>
+					</select> 省
+					<select name="city">
+						<option value="">—请选择—</option>
+					</select> 市
+					<select name="town">
+						<option value="">—请选择—</option>
+					</select> 县
+				</p>
+				<p>个人爱好：
+					<input type="checkbox" class="checkbox" name="hobby[]" value="电脑" id="pc"  /> <label for="pc">电脑</label>
+					<input type="checkbox" class="checkbox" name="hobby[]" value="体育" id="pe"  /> <label for="pe">体育</label>
+					<input type="checkbox" class="checkbox" name="hobby[]" value="音乐" id="music"  /> <label for="music">音乐</label>
+					<input type="checkbox" class="checkbox" name="hobby[]" value="文学" id="letter"  /> <label for="letter">文学</label>
+					<input type="checkbox" class="checkbox" name="hobby[]" value="哲学" id="sage"  /> <label for="sage">哲学</label>
+					<input type="checkbox" class="checkbox" name="hobby[]" value="几何" id="geometry"  /> <label for="geometry">几何</label>
+					<input type="checkbox" class="checkbox" name="hobby[]" value="探险" id="explore"  /> <label for="explore">探险</label>
+					<input type="checkbox" class="checkbox" name="hobby[]" value="" id="other"  /> <label for="other">其它</label>
+				</p>
+				<label id="otherHobbyLabel">其它爱好：<input type="text" name="otherHobbyInput" maxlength="16" /></label>
+				<label>座 右 铭：<textarea name="motto"></textarea>
+					<em><span class="curLen">0</span>/<span class="maxLen">200</span>字， 还能输入<span class="leftLen">200</span>字！</em></label>
+				<p class="submit">
+					<input type="submit" value="注册" class="button" />
+					<input type="reset" class="button" value="重置" />
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>
